@@ -1,2 +1,5 @@
 mobId,primaryType,sacredSpirits,wickedSpirits,arcaneSpirits,eldritchSpirits,aerialSpirits,aqueousSpirits,earthenSpirits,infernalSpirits
-ars_elemental:air_mage,aerial,0,0,0,0,2,0,0,0,0
+ars_elemental:air_mage,aerial,		0,0,0,0,2,0,0,0
+ars_elemental:water_mage,aqueous,	0,0,0,0,0,2,0,0
+ars_elemental:earth_mage,earthen,	0,0,0,0,0,0,2,0
+ars_elemental:fire_mage,infernal,	0,0,0,0,0,0,0,2

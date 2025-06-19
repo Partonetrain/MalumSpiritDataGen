@@ -3,9 +3,5 @@
     "registry_name": "%REGISTRYNAME%",
     "primary_type": "%PRIMARYTYPE%",
     "spirits": [
-      {
-        "spirit": "aqueous",
-        "count": 2
-      }
     ]
 }
