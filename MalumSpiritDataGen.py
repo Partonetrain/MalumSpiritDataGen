@@ -98,28 +98,28 @@ def FillTemplate():
 
     if(entry.sacredSpirits > 0):
         print(f"{entry.modid}:{entry.mobname} has {entry.sacredSpirits} sacred")
-        recipe_data["spirits"].append({"sacred": entry.sacredSpirits})
+        recipe_data["spirits"].append({"spirit": "malum:sacred", "count": entry.sacredSpirits})
     if(entry.wickedSpirits > 0):
         print(f"{entry.modid}:{entry.mobname} has {entry.wickedSpirits} wicked")
-        recipe_data["spirits"].append({"wicked": entry.wickedSpirits})
+        recipe_data["spirits"].append({"spirit": "malum:wicked", "count": entry.wickedSpirits})
     if(entry.arcaneSpirits > 0):
         print(f"{entry.modid}:{entry.mobname} has {entry.arcaneSpirits} arcane")
-        recipe_data["spirits"].append({"arcane": entry.arcaneSpirits})
+        recipe_data["spirits"].append({"spirit": "malum:arcane", "count": entry.arcaneSpirits})
     if(entry.eldritchSpirits > 0):
         print(f"{entry.modid}:{entry.mobname} has {entry.eldritchSpirits} eldritch")
-        recipe_data["spirits"].append({"eldritch": entry.eldritchSpirits})
+        recipe_data["spirits"].append({"spirit": "malum:eldritch", "count": entry.eldritchSpirits})
     if(entry.aerialSpirits > 0):
         print(f"{entry.modid}:{entry.mobname} has {entry.aerialSpirits} aerial")
-        recipe_data["spirits"].append({"aerial": entry.aerialSpirits})
+        recipe_data["spirits"].append({"spirit": "malum:aerieal", "count": entry.aerialSpirits})
     if(entry.aqueousSpirits > 0):
         print(f"{entry.modid}:{entry.mobname} has {entry.aqueousSpirits} aqueous")
-        recipe_data["spirits"].append({"aqueous": entry.aqueousSpirits})
+        recipe_data["spirits"].append({"spirit": "malum:aqueous", "count": entry.aqueousSpirits})
     if(entry.earthenSpirits > 0):
         print(f"{entry.modid}:{entry.mobname} has {entry.earthenSpirits} earthen")      
-        recipe_data["spirits"].append({"earthen": entry.earthenSpirits})
+        recipe_data["spirits"].append({"spirit": "malum:earthen", "count": entry.earthenSpirits})
     if(entry.infernalSpirits > 0):
         print(f"{entry.modid}:{entry.mobname} has {entry.infernalSpirits} infernal")      
-        recipe_data["spirits"].append({"infernal": entry.infernalSpirits})
+        recipe_data["spirits"].append({"spirit": "malum:infernal", "count": entry.infernalSpirits})
 
                                       
     recipe_path = path + "\\" + entry.mobname + ".json"
@@ -129,22 +129,6 @@ def FillTemplate():
         recipes_generated = recipes_generated + 1
     output_file.close()
   return recipes_generated
-
-def getTimeFromTier(tier):
-    if(tier == 0): # Wood
-        return 250
-    if(tier == 1): # Gold
-        return 300
-    if(tier == 2): # Stone
-        return 500
-    if(tier == 3): # Iron
-        return 750
-    if(tier == 4): # Diamond
-        return 1500
-    if(tier == 5): # Netherite
-        return 2000
-    if(tier > 5): # Anything higher
-        return 3000
 
 def tryMakeDir(path):
     os.makedirs(path, exist_ok=True) #mkdirs can create subdirs
