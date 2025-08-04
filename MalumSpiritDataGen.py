@@ -91,10 +91,13 @@ def FillTemplate():
 
     recipe_data["registry_name"] = entry.modid + ":" + entry.mobname
 
+    if("malum:" not in entry.primaryType):
+        entry.primaryType = "malum:" + entry.primaryType
     recipe_data["primary_type"] = entry.primaryType
     recipe_data["spirits"].clear()
     #I don't know why but without the clear it retains the
     #spirits of the previous entry
+    print(f"{entry.modid}:{entry.mobname} has a primary type of {entry.primaryType}")
 
     if(entry.sacredSpirits > 0):
         print(f"{entry.modid}:{entry.mobname} has {entry.sacredSpirits} sacred")
